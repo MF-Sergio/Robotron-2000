@@ -84,7 +84,7 @@ Projeto de uma página com um robô que possui estatísticas de combate dinamica
 
 ## Deploy da página :dash:
 
-> 
+> https://mf-sergio.github.io/Robotron-2000/
   
 <br>
 
