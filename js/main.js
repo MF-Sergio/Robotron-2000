@@ -1,5 +1,5 @@
 const controle = document.querySelectorAll("[data-controle]");
-const estatisticas = document.querySelectorAll("[data-estatistica]")
+const estatisticas = document.querySelectorAll("[data-estatistica]");
 const pecas = {
     "bracos": {
         "forca": 29,
@@ -33,6 +33,10 @@ const pecas = {
         "velocidade": -2
     }
 }
+const botaoCores = document.querySelector("[data-botao_cor]");
+const cor = document.querySelectorAll("[data-cor]");
+const robo = document.querySelector("[data-imagem_robo]");
+console.log(cor)
 
 controle.forEach((elemento) => {
     elemento.addEventListener('click', (evento) => {
@@ -46,18 +50,33 @@ function manipulaDados(operacao, controle) {
     if (operacao === "-") {
         peca.value = parseInt(peca.value) - 1;
     } else {
-        peca.value = parseInt(peca.value) + 1 ;
+        peca.value = parseInt(peca.value) + 1;
     }
 }
 
 function atualizaEstatisticas(peca, operacao) {
     if(operacao === "+") {
     estatisticas.forEach((elemento) => {
-        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
+        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
     })
     } else {
     estatisticas.forEach((elemento) => {
-        elemento.textContent = parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatistica]
+        elemento.textContent = parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatistica];
     })
     }
 }
+
+function mostrarCores() {
+    const cores = document.querySelector("[data-cores]");
+    botaoCores.addEventListener('click', () => {
+    cores.classList.toggle("cores--ativo");
+    })
+}
+
+cor.forEach((elemento) => {
+    elemento.addEventListener('click', () => {
+        robo.setAttribute('src','img/imagens-do-robotron/' + elemento.dataset.cor + '.png');
+    })
+})
+
+mostrarCores();
