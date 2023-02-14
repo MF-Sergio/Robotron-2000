@@ -21,6 +21,10 @@
 
 <br>
 
+## :star:Destaque
+
+*Fora todo o projeto desenvolvido junto ao curso, por conta própria criei um botão retrátil para mostrar as cores possíveis e também aplicalas ao robotron de acordo com o clique na cor correspondente.*
+
 ## Descrição do projeto 
 
 Projeto de uma página com um robô que possui estatísticas de combate dinamicas, com utilização de um botão de "+" e "-" adicionando e removendo peças do robô. Esse projeto foi feito em acompanhamento ao curso "JavaScript: manipulando o DOM" da Alura e foi criado com intuito de aprimorar e treinar os conhecimentos sobre Javascript e a aplicação da linguagem no DOM.
