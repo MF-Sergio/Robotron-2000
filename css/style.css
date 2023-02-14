@@ -63,6 +63,7 @@ main {
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
     height: 80%;
+    padding: 2em 2em 0;
 }
 
 /****************************** Equipamentos *****/
@@ -153,7 +154,6 @@ main {
 /****************************** Estatísticas *****/
 .estatisticas {
     flex-basis: 23%;
-    padding: 2em 2em 0;
 }
 
 .estatistica {
@@ -208,7 +208,86 @@ main {
     flex-basis: 35%;
     margin: 10px 0 0;
 }
+/****************************** Alterar cor do robotron *****/
+.altera-cor-robotron {
+    position: absolute;
+    display: flex;
+}
 
+.botao-altera-cor {
+    z-index: 2;
+    font-family: 'Teko', 'sans-serif';
+    margin-top: 1em;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    float: right;
+    border: 3px solid var(--main-branco);
+    background: var(--main-branco);
+    cursor: pointer;
+}
+
+.botao-altera-cor:hover {
+    background: var(--main-preto);
+    color: var(--main-branco)
+}
+
+.cores {
+    transition:  .30s;
+    position: absolute;
+    right: 0;
+    align-self: flex-end;
+    height: 4em;
+    opacity: 0;
+}
+
+.cores--ativo { 
+    transition: .30s;
+    position: absolute;
+    opacity: 100%;
+    right: -101%;
+    z-index: 1;
+}
+
+.cores--ativo  [data-cor] {
+    border: solid 1px var(--main-cinza);
+}
+
+[data-cor] {
+    width: 2em;
+    height: inherit;
+}
+
+[data-cor]:hover {
+    cursor: pointer;
+    border: solid 2px var(--main-preto);
+}
+
+[data-cor="amarelo"] {
+    background-color: yellow;
+}
+
+[data-cor="azul"] {
+    background-color: blue;
+}
+
+[data-cor="branco"] {
+    background-color: white;
+}
+
+[data-cor="preto"] {
+    background-color: black;
+}
+
+[data-cor="rosa"] {
+    background-color: #FFC0CB;
+}
+
+[data-cor="vermelho"] {
+    background-color: red;
+}
+
+/****************************** Media Queries *****/
 @media screen and (max-width: 1600px) {
     body { 
         font-size: 14px;
