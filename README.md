@@ -95,6 +95,8 @@ Projeto de uma página com um robô que possui estatísticas de combate dinamica
 ## Linguagens utilizadas :books:
 
 - JavaScript
+- HTML
+- CSS
 
 <br>
   
